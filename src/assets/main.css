@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+}
+.font-ubuntu {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+}
+
+.ripple-in {
+  animation: ripple-in 0.4s ease-out forwards;
+}
+@keyframes ripple-in {
+  0% {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.ripple-out {
+  animation: ripple-out 0.25s ease-out forwards;
+}
+@keyframes ripple-out {
+  to {
+    opacity: 0;
+  }
+}
+
+.can-click {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-active {
+  transition-delay: 1s;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+.slide-leave-active {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+.slide-enter-from {
+  transform: translateX(20px);
+  opacity: 0;
+}
+.slide-leave-to {
+  transform: translateX(-20px);
+  opacity: 0;
+}
